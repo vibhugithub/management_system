@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Edit Incident</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <!-- Incident Type -->
+    <label for="incident_type">Incident Type:</label>
+    <select id="incident_type" name="incident_type">
+        <option value="Enterprise" {% if incident.incident_type == "Enterprise" %}selected{% endif %}>Enterprise</option>
+        <option value="Government" {% if incident.incident_type == "Government" %}selected{% endif %}>Government</option>
+    </select><br>
+
+    <!-- Incident Details -->
+    <label for="incident_details">Incident Details:</label>
+    <textarea id="incident_details" name="incident_details">{{ incident.incident_details }}</textarea><br>
+
+    <!-- Priority -->
+    <label for="priority">Priority:</label>
+    <select id="priority" name="priority">
+        <option value="High" {% if incident.priority == "High" %}selected{% endif %}>High</option>
+        <option value="Medium" {% if incident.priority == "Medium" %}selected{% endif %}>Medium</option>
+        <option value="Low" {% if incident.priority == "Low" %}selected{% endif %}>Low</option>
+    </select><br>
+
+    <!-- Status -->
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+        <option value="Open" {% if incident.status == "Open" %}selected{% endif %}>Open</option>
+        <option value="In progress" {% if incident.status == "In progress" %}selected{% endif %}>In progress</option>
+        <option value="Closed" {% if incident.status == "Closed" %}selected{% endif %}>Closed</option>
+    </select><br>
+
+    <!-- Submit Button -->
+    <button type="submit">Save Changes</button>
+</form>
+{% endblock %}

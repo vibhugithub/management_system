@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search Incident</h2>
+<form method="get">
+    <label for="incident_id">Incident ID</label>
+    <input type="text" id="incident_id" name="incident_id">
+    <button type="submit">Search</button>
+</form>
+{% endblock %}

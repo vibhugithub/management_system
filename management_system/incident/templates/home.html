@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="center-text">Welcome to the Incident Management System,  {{user.first_name}}</h1>
+   
+<div class="container">
+
+    <button onclick="window.location.href='{% url 'create_incident' %}'" class="btn">
+        Create a new incident
+    </button>
+    <button onclick="window.location.href='{% url 'incident_list' %}'" class="btn">
+        View your incidents
+    </button>
+</div>
+
+{% comment %} <a href="{% url 'create_incident' %}">Create a new incident</a>
+<a href="{% url 'incident_list' %}" class="btn">View your incidents</a> {% endcomment %}
+{% endblock %}

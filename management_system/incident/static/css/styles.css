@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 10px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Space between nav items */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+.nav-links a:hover {
+    color: #080808;
+    /* Color change on hover */
+}
+
+.search-container {
+    display: flex;
+    width: 150px;
+    min-height: 40px;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 6px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 17px;
+}
+
+.search-container button {
+    padding: 6px;
+    background-color: #9da5ac;
+    color: #121111;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    height: 32px;
+    width: 60px;
+}
+
+.search-container button i {
+    font-size: 17px;
+}
+
+.search-container button:hover {
+    background-color: #ccc;
+}
+
+main {
+    padding: 2em;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* Centers the buttons horizontally */
+    align-items: center;
+    /* Centers the buttons vertically */
+    height: 50vh;
+    /* Full height of the viewport */
+    text-align: center;
+    /* Ensures the buttons' text is centered */
+    gap: 25px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.subbtn,
+.btn {
+    width: 500px;
+    padding: 0.7em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.0em;
+    cursor: pointer;
+}
+
+.subbtn:hover,
+.btn:hover {
+    background-color: #9da5ac;
+}

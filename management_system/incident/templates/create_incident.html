@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="center-text" >Create Incident</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="incident_type">Incident Type:</label>
+    <select id="incident_type" name="incident_type">
+        <option value="Enterprise">Enterprise</option>
+        <option value="Government">Government</option>
+    </select>
+    <br>
+    <br>
+    <br>
+
+    <label for="incident_details">Incident Details:</label>
+    <textarea id="incident_details" name="incident_details" rows="10" cols="50"></textarea><br>
+    <br>
+    <br>
+    <label for="priority">Priority:</label>
+    <select id="priority" name="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </select>
+    <br>
+    <br>
+
+
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+        <option value="Open">Open</option>
+        <option value="In progress">In progress</option>
+        <option value="Closed">Closed</option>
+    </select>
+    <br>
+    <br>
+
+    <button type="submit" class="subbtn">Create Incident</button>
+</form>
+{% endblock %}
