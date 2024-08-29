@@ -83,7 +83,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "incident",  # SQLite database file
         "USER": "root",
-        "PASSWORD": "",
+        "PASSWORD": "Data@987saver",
         "HOST": "localhost",
         "PORT": "3306",
     }
